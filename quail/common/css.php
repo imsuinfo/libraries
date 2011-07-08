@@ -123,7 +123,7 @@ class quailCSS {
 		foreach($this->css as $selector => $style) {
 			$xpath = new DOMXPath($this->dom);
 			$entries = @$xpath->query($this->getXpath($selector));
-			if($entries->length) {
+			if(is_object($entries) && property_exists($entries, 'length') && $entries->length) {
 				foreach($entries as $e) {
 					if(!$e->hasAttribute('quail_style_index')) {
 						$e->setAttribute('quail_style_index', $this->next_index);
