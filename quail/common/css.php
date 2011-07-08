@@ -149,10 +149,16 @@ class quailCSS {
 	*/
 	private function addCSSToElement($element, $style, $specificity) {
 		$index_id = $element->getAttribute('quail_style_index');
+		if (!isset($this->style_index[$index_id])){
+			$this->style_index[$index_id] = array();
+		}
+
 		foreach($style as $name => $value) {
-			if(!$this->style_index[$index_id][$name] ||
-			    $this->style_index[$index_id][$name]['specificity'] < $specificity
-			    || strpos($value, '!important') !== false) 
+			if(!isset($this->style_index[$index_id][$name]) ||
+			  !$this->style_index[$index_id][$name] ||
+			  (isset($this->style_index[$index_id][$name]['specificity']) &&
+			  $this->style_index[$index_id][$name]['specificity'] < $specificity) ||
+			  strpos($value, '!important') !== false)
 			{
 				$this->style_index[$index_id][$name] = array(
 					'value' => str_replace('!important', '', trim(strtolower($value))),
