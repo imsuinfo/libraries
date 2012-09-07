@@ -1056,7 +1056,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 
 									// Check if the <html> tag is available.
 									if ( !(/<html[\s|>]/).test( data ) )
-										data = '<html>' + data + '</html>';
+										data = '<html class="wysiwyg wysiwyg-ckeditor">' + data + '</html>';
 
 									// Check if the <head> tag is available.
 									if ( !(/<head[\s|>]/).test( data ) )
@@ -1082,7 +1082,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 								{
 									data =
 										config.docType +
-										'<html dir="' + config.contentsLangDirection + '"' +
+										'<html class="wysiwyg wysiwyg-ckeditor" dir="' + config.contentsLangDirection + '"' +
 											' lang="' + ( config.contentsLanguage || editor.langCode ) + '">' +
 										'<head>' +
 											'<title>' + frameLabel + '</title>' +
