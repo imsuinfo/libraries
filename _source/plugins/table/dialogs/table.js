@@ -328,10 +328,11 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 										{
 											type : 'select',
 											id : 'selHeaders',
-											'default' : 'row',
+											'default' : '',
 											label : editor.lang.table.headers,
 											items :
 											[
+												[ editor.lang.table.headersNone, '' ],
 												[ editor.lang.table.headersRow, 'row' ],
 												[ editor.lang.table.headersColumn, 'col' ],
 												[ editor.lang.table.headersBoth, 'both' ]

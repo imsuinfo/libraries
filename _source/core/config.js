@@ -159,7 +159,7 @@ CKEDITOR.config =
 	 * // Not recommended.
 	 * config.enterMode = CKEDITOR.ENTER_BR;
 	 */
-	enterMode : CKEDITOR.ENTER_BR,
+	enterMode : CKEDITOR.ENTER_P,
 
 	/**
 	 * Force the use of <code>{@link CKEDITOR.config.enterMode}</code> as line break regardless
@@ -240,11 +240,6 @@ CKEDITOR.config =
 	 * config.bodyClass = 'contents';
 	 */
 	bodyClass : '',
-
-	/**
-	 * Hack to allow dynamic changing of html classes.
-	 */
-	htmlClass : 'wysiwyg wysiwyg-ckeditor mcneese mcneese-ckeditor',
 
 	/**
 	 * Indicates whether the contents to be edited are being input as a full

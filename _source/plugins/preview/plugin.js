@@ -23,11 +23,6 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 				baseTag = config.baseHref ? '<base href="' + config.baseHref + '"/>' : '',
 				isCustomDomain = CKEDITOR.env.isCustomDomain();
 
-			var htmlClass = 'wysiwyg wysiwyg-ckeditor mcneese mcneese-ckeditor';
-
-			if ( config.htmlClass )
-				htmlClass = config.htmlClass;
-
 			if ( config.fullPage )
 			{
 				sHTML = editor.getData()
@@ -51,7 +46,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 
 				sHTML =
 					editor.config.docType +
-					'<html dir="' + editor.config.contentsLangDirection + '" class="' + htmlClass + '">' +
+					'<html dir="' + editor.config.contentsLangDirection + '">' +
 					'<head>' +
 					baseTag +
 					'<title>' + editor.lang.preview + '</title>' +
